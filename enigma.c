@@ -1,6 +1,7 @@
 #include <stdio.h>
-	
+
  //CREATION DES TABLEAUX POUR CHAQUE ROTORS
+ //Ajout d'un commentaire
 
     int TABrotor1[]= {
         0, // valeur tableau 0
@@ -27,9 +28,9 @@
         18,// valeur tableau 21
         10,// valeur tableau 22
         16,// valeur tableau 23
-        15,// valeur tableau 24 
-        25,// valeur tableau 25     
-      
+        15,// valeur tableau 24
+        25,// valeur tableau 25
+
       };
 
     int TABrotor2[]= {
@@ -57,9 +58,9 @@
         13,// valeur tableau 21
         14,// valeur tableau 22
         15,// valeur tableau 23
-        25,// valeur tableau 24 
-        16,// valeur tableau 25     
-      
+        25,// valeur tableau 24
+        16,// valeur tableau 25
+
       };
 
     int TABrotor3[]= {
@@ -87,9 +88,9 @@
         18, // valeur tableau 21
         5, // valeur tableau 22
         19,// valeur tableau 23
-        3,// valeur tableau 24 
-        1, // valeur tableau 25     
-      
+        3,// valeur tableau 24
+        1, // valeur tableau 25
+
       };
 
 
@@ -118,8 +119,8 @@
         7, // valeur tableau 21
         1, // valeur tableau 22
         23,// valeur tableau 23
-        21,// valeur tableau 24 
-        20,// valeur tableau 25     
+        21,// valeur tableau 24
+        20,// valeur tableau 25
       };
 
     int TABrotor5[]= {
@@ -147,8 +148,8 @@
         1, // valeur tableau 21
         6, // valeur tableau 22
         9, // valeur tableau 23
-        11,// valeur tableau 24 
-        0, // valeur tableau 25     
+        11,// valeur tableau 24
+        0, // valeur tableau 25
       };
 
     int TABrotor6[]= {
@@ -176,13 +177,13 @@
         20,// valeur tableau 21
         21,// valeur tableau 22
         0, // valeur tableau 23
-        4, // valeur tableau 24 
-        11,// valeur tableau 25     
+        4, // valeur tableau 24
+        11,// valeur tableau 25
       };
-      
 
 
-// CREATION DU TABLEAU DE VALEUR / 27 POSITIONS POUR LES ROTORS 
+
+// CREATION DU TABLEAU DE VALEUR / 27 POSITIONS POUR LES ROTORS
 
   char Alphabet[]={
     'A',  // valeur tableau 0
@@ -213,112 +214,112 @@
     'Z',  // valeur tableau 25
     //' ',  // valeur tableau 26
     };
-/*#############################################################################*/   
-/*-----------------------------------------------------------------------------*/  
-/*#############################################################################*/       
-// FONCTION DE CRYPTAGE     
-    
+/*#############################################################################*/
+/*-----------------------------------------------------------------------------*/
+/*#############################################################################*/
+// FONCTION DE CRYPTAGE
+
   //  cryptage
-    
-    
-/*#############################################################################*/   
-/*-----------------------------------------------------------------------------*/  
-/*#############################################################################*/   
- 
+
+
+/*#############################################################################*/
+/*-----------------------------------------------------------------------------*/
+/*#############################################################################*/
+
 int main (){
 
 
-//INITIALISATION POSITION DES ROTORS 1 A 6 
+//INITIALISATION POSITION DES ROTORS 1 A 6
         int rotor1=0;
         int rotor2=0;
         int rotor3=0;
         int rotor4=0;
         int rotor5=0;
-        int rotor6=0;  
-        
- 
- 
-  
-//INITIALISATION INCREMENT PAIRAGE DES LETTRES / 11 PAIRAGES POSSIBLES   
+        int rotor6=0;
+
+
+
+
+//INITIALISATION INCREMENT PAIRAGE DES LETTRES / 11 PAIRAGES POSSIBLES
 
   	  int liaison= 0 ;
-    
+
     	  char paires0[1];
        char paires1[1];
        char paires2[1];
        char paires3[1];
-   
+
        char msg[]="";
-    
-    
+
+
 
 //PARAMETRAGE DE LA POSITION INITIALE DES 6 ROTORS
 
 	printf("Bonjour, veuillez rentrer le réglage des ROTORS (entre 0 et 25) : \n\n");
-	
+
 	begin1: ;
 		printf("ROTOR1: ");
-		scanf("%d",&rotor1);	
+		scanf("%d",&rotor1);
 			if(rotor1 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin1; 
+			goto begin1;
 			}
-	
+
 	begin2: ;
 		printf("ROTOR2: ");
 		scanf("%d",&rotor2);
 			if(rotor2 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin2; 
+			goto begin2;
 			}
-			
-	begin3: ;					 
+
+	begin3: ;
 		printf("ROTOR3: ");
 		scanf("%d",&rotor3);
 			if(rotor3 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin3; 
-			}	
-			
-	begin4: ;						 
+			goto begin3;
+			}
+
+	begin4: ;
 		printf("ROTOR4: ");
 		scanf("%d",&rotor4);
 			if(rotor4 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin4; 
-			}	
-			
-	begin5: ;						 
+			goto begin4;
+			}
+
+	begin5: ;
 		printf("ROTOR5: ");
 		scanf("%d",&rotor5);
 			if(rotor5 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin5; 
-			}	
-	begin6: ;			 
+			goto begin5;
+			}
+	begin6: ;
 		printf("ROTOR6: ");
 		scanf("%d",&rotor6);
 			if(rotor6 > 25){
 			printf("Valeur invalide, RECOMMENCEZ\n");
-			goto begin6; 
-			}	
+			goto begin6;
+			}
 
 
 
 //INDEXAGE DE LA POSITION DES 6 ROTORS PAR RAPPORT A LA VARIABLE " rotor** "
-	
+
 	TABrotor1[rotor1];
 	TABrotor2[rotor2];
 	TABrotor3[rotor3];
 	TABrotor4[rotor4];
 	TABrotor5[rotor5];
 	TABrotor6[rotor6];
-		
-	
+
+
 //AFFICHAGE DU REGLAGE DES ROTORS
-	
+
 	printf("REGLAGE DES ROTORS: \n\n");
-	
+
 	printf("%d,",rotor1);
 	printf("%d,",rotor2);
 	printf("%d,",rotor3);
@@ -336,57 +337,57 @@ int main (){
 
 
 //BOUCLE DE SAISIE PAIRAGE LETTRE
- /*        
-	if(rotor1 == 0 && liaison <= 9 ) {   
-		printf("Veuillez saisir PAIRAGE N°%d \n",liaison);            
-          printf("LETTRE N°1  (paire %d) : \n",liaison);  
-              
-          scanf("%c \n",paires0);  
-        
-     } 
+ /*
+	if(rotor1 == 0 && liaison <= 9 ) {
+		printf("Veuillez saisir PAIRAGE N°%d \n",liaison);
+          printf("LETTRE N°1  (paire %d) : \n",liaison);
 
-     
-     if(rotor1 == 0 && liaison <= 9){            
-		printf("LETTRE N°2: (paire %d) : \n",liaison);  
+          scanf("%c \n",paires0);
+
+     }
+
+
+     if(rotor1 == 0 && liaison <= 9){
+		printf("LETTRE N°2: (paire %d) : \n",liaison);
 		scanf("%c\n",paires1);
-    
+
      }
-         
-liaison++;     
-          
-       
-	if(rotor1 == 0 && liaison <= 9 ){  
-		printf("Veuillez saisir PAIRAGE N°%d \n",liaison); 
-		printf("LETTRE N°1  (paire %d) : \n",liaison);  
-              
-          scanf("%c\n",paires2);  
+
+liaison++;
+
+
+	if(rotor1 == 0 && liaison <= 9 ){
+		printf("Veuillez saisir PAIRAGE N°%d \n",liaison);
+		printf("LETTRE N°1  (paire %d) : \n",liaison);
+
+          scanf("%c\n",paires2);
      }
-       
-	
-	if(rotor1 == 0 && liaison <= 9){   
-		printf("LETTRE N°2: (paire %d) : \n",liaison);  
-              
+
+
+	if(rotor1 == 0 && liaison <= 9){
+		printf("LETTRE N°2: (paire %d) : \n",liaison);
+
           scanf("%c\n",paires3);
-        
+
      }
          else{
 		printf("ERREUR\n");
-	 }  
-          
-liaison++; 
-   
+	 }
+
+liaison++;
+
 	printf("%c \n",paires0[1]);
      printf("%c \n",paires1[1]);
      printf("%c \n",paires2[1]);
      printf("%c \n",paires3[1]);
      printf("%d \n",liaison);
-                               
+
 */
 
 
 
 // PARTIE INCREMENTATION DES ROTORS
-        
+
       while(liaison <=9){
 		if (liaison <= 9){
                printf("Saisir MESSAGE à CRYPTER ou DECRYPTER : \n");
@@ -396,45 +397,30 @@ liaison++;
 
                rotor1++;
 
-               if ( rotor1 == 26 ) {     
-				rotor2++ ; 
+               if ( rotor1 == 26 ) {
+				rotor2++ ;
 				rotor1=0;
-				
+
                }
-                             
-               if ( rotor2 == 26 ) {     
-               	rotor3++ ; 
+
+               if ( rotor2 == 26 ) {
+               	rotor3++ ;
                     rotor1=0;
                     rotor2=0;
                }
 		}
 	}
-              
-             
+
+
  /*     for(rotor4 = 0; rotor4 < 10; rotor4++){
       	printf("%d \n", rotor4);
       }
-       
- */    
-       
-       
-       
+
+ */
+
+
+
        }
-       
-       
-             
-             
-             
-            
-              
-             
-              
-      
-      
-     
-
-      
-   
 
 
 
@@ -444,9 +430,24 @@ liaison++;
 
 
 
-  
-   
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
